@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.obsidianecho.com/sitemap.xml

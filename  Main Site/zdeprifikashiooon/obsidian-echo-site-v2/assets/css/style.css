@@ -1,0 +1,90 @@
+
+/* Inter font is loaded from Google Fonts in index.html */
+:root{
+  --navy:#0b2545; 
+  --teal:#0d9488;
+  --ink:#111827;
+  --muted:#6b7280;
+  --card:#ffffff;
+  --bg:#f8fafc;
+}
+html,body{margin:0;padding:0;}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu; color:var(--ink); background:#fff; letter-spacing:-0.015em;}
+.container{max-width:1200px;margin:0 auto;padding:0 24px;}
+.section{padding:72px 0;}
+h1,h2,h3{line-height:1.15;}
+a.button{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border-radius:10px;font-weight:600;text-decoration:none;}
+.button.primary{background:#fff;color:#111827;}
+.button.secondary{border:1px solid rgba(255,255,255,.72);color:#fff;}
+.button.dark{background:var(--teal);color:#fff;}
+.button.outline{border:1px solid #cbd5e1;color:var(--ink);}
+.button.small{padding:10px 14px;border-radius:8px}
+.button:hover{filter:brightness(.98);}
+
+/* Hero */
+.hero{position:relative;height:72vh;min-height:560px;display:flex;align-items:center;background:#000;color:#fff;}
+.hero .bg{position:absolute;inset:0;background-size:cover;background-position:center;}
+.hero .overlay{position:absolute;inset:0;background:rgba(0,0,0,.45);}
+.hero .content{position:relative;z-index:2;text-align:center;width:100%;}
+.hero h1{font-size:56px;margin:0 0 16px;}
+.hero h2{font-size:22px;margin:0 0 24px;color:rgba(255,255,255,.9)}
+.hero p{font-size:18px;color:rgba(255,255,255,.85);max-width:720px;margin:0 auto 28px;}
+
+/* Nav */
+.nav{position:absolute;top:0;left:0;right:0;z-index:10;padding:18px 0;}
+.nav .brand{font-weight:700;color:#fff;font-size:22px;letter-spacing:.02em}
+.nav .links a{color:rgba(255,255,255,.86);text-decoration:none;margin-left:24px}
+.nav .links a:hover{color:#fff}
+
+/* Focus Area Cards */
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-gap:28px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+.card{background:#fff;border-radius:14px;padding:28px;box-shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.06)}
+.card:hover{box-shadow:0 16px 36px rgba(0,0,0,.08);transform:translateY(-2px);transition:.25s}
+.card h3{margin:0 0 8px;font-size:20px}
+.card p{margin:0 0 10px;color:#475569}
+
+/* Gold numbers */
+.num{font-weight:800;font-size:38px;line-height:1;letter-spacing:.02em;
+  background:linear-gradient(180deg,#F8E9A1 0%, #F1C40F 52%, #B7860B 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  text-shadow:0 1px 0 rgba(0,0,0,.18),0 2px 6px rgba(0,0,0,.1);
+}
+
+/* About */
+.about{position:relative;color:#fff;}
+.about .bg{position:absolute;inset:0;background-size:cover;background-position:center;}
+.about .overlay{position:absolute;inset:0;background:rgba(0,0,0,.52)}
+.about .inner{position:relative;display:grid;grid-template-columns:340px 1fr;grid-gap:32px;align-items:center}
+@media(max-width:1000px){.about .inner{grid-template-columns:1fr; text-align:left}}
+.headshot{width:220px;height:220px;border-radius:999px;border:5px solid #fff;object-fit:cover;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+
+/* Services */
+.services .subtitle{color:#64748b}
+.services .pricing{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-gap:24px}
+@media(max-width:1000px){.services .pricing{grid-template-columns:1fr}}
+.price-card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:22px;box-shadow:0 8px 24px rgba(0,0,0,.04)}
+.price-card h4{margin:0 0 8px}
+.price{font-weight:800;font-size:18px;color:#111827;margin:4px 0 12px}
+.badge{display:inline-block;padding:6px 10px;border-radius:999px;background:#eef2ff;color:#3730a3;font-weight:600;font-size:12px;margin-bottom:10px}
+
+/* Book */
+.book .tabs{display:flex;gap:8px;justify-content:center;margin-bottom:16px}
+.tab{padding:8px 12px;border:1px solid #cbd5e1;border-radius:10px;background:#fff;cursor:pointer}
+.tab.active{background:#0d9488;color:#fff;border-color:#0d9488}
+.embed{height:520px;border-radius:14px;border:1px solid #e5e7eb;overflow:hidden;background:#0b2545}
+.embed .placeholder{display:flex;align-items:center;justify-content:center;height:100%;color:#e2e8f0}
+
+/* Contact */
+.contact .note{color:#475569}
+.form-card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:22px;box-shadow:0 8px 24px rgba(0,0,0,.04)}
+
+/* Footer */
+.footer{background:#0f172a;color:#cbd5e1;padding:32px 0;margin-top:40px}
+.footer a{color:#cbd5e1;text-decoration:none;margin-left:14px}
+.footer a:hover{color:#fff}
+
+/* Utility */
+.mt-2{margin-top:8px}.mt-3{margin-top:12px}.mt-4{margin-top:16px}.mt-5{margin-top:20px}.mt-6{margin-top:24px}.mt-8{margin-top:32px}.mb-8{margin-bottom:32px}
+.text-center{text-align:center}
+.hidden{display:none}

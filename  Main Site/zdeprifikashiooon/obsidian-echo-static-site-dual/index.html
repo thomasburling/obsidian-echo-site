@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Obsidian Echo — Strategic Advisory</title>
+<meta name="description" content="Strategic advisory for AI, cloud, data infrastructure & ecosystem GTM. Field-tested insight on hyperscalers, partners, and enterprise adoption."/>
+<meta property="og:title" content="Obsidian Echo — Strategic Advisory"/>
+<meta property="og:description" content="Strategic advisory for AI, cloud, data infra, and ecosystem GTM."/>
+<meta property="og:image" content="assets/og-image.png"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://obsidianecho.com"/>
+<link rel="icon" type="image/png" href="assets/favicon.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<header class="nav"><div class="container nav__inner">
+  <div class="brand">Obsidian Echo</div>
+  <nav class="nav__links"><a href="#services">Services</a><a href="#focus">Focus</a><a href="#about">About</a><a href="#book">Book</a><a href="#contact">Contact</a></nav>
+  <button class="nav__menu" id="menuBtn" aria-label="Open Menu">☰</button>
+</div></header>
+
+<main>
+<section class="hero" style="--hero:url('assets/la-skyline.jpg')"><div class="hero__overlay"></div><div class="container hero__content">
+  <h1>Strategic Advisory for AI, Cloud, Data Infrastructure & Ecosystem GTM</h1>
+  <p>LA-based perspective with field-tested insight on hyperscalers, partners, and enterprise adoption.</p>
+  <div class="hero__ctas"><a class="btn btn--primary" href="#services">Explore Services</a><a class="btn btn--outline" href="#book">Book a Call</a></div>
+</div></section>
+
+<section id="focus" class="section"><div class="container">
+  <h2 class="section__title">Strategic Focus Areas</h2>
+  <p class="section__sub">Advisory designed to pressure-test theses and de-risk decisions across AI, cloud, data, and the partner ecosystem.</p>
+  <div class="grid grid--2">
+    <div class="card"><span class="card__index">01</span><h3>Hyperscaler &amp; GSI Partner Dynamics</h3><ul><li>GTM mechanics &amp; incentives (AWS, Azure, GCP, GSIs)</li><li>ACE &amp; Marketplace flows; co-sell motions</li><li>Competitive landscape &amp; share-shift signals</li></ul></div>
+    <div class="card"><span class="card__index">02</span><h3>AI &amp; Enterprise Business Adoption</h3><ul><li>Pragmatic use cases; data readiness &amp; governance</li><li>Org hurdles vs. revenue-impact framing</li><li>Board-level decision playbooks</li></ul></div>
+    <div class="card"><span class="card__index">03</span><h3>Database &amp; Data Infrastructure Evolution</h3><ul><li>Vector DBs, orchestration, metadata architectures</li><li>Positioning &amp; roadmaps; investment theses</li><li>Infra investment themes &amp; valuation drivers</li></ul></div>
+    <div class="card"><span class="card__index">04</span><h3>GTM &amp; Ecosystem Due Diligence</h3><ul><li>Partner attach &amp; marketplace diagnostics</li><li>Repeatable motions that scale</li><li>Hyperscaler &amp; GSI validation</li></ul></div>
+  </div>
+</div></section>
+
+<section class="band"><div class="container band__row"><span>AWS</span><span>GCP</span><span>Snowflake</span><span>Databricks</span></div></section>
+
+<section id="services" class="section"><div class="container">
+  <h2 class="section__title">Services</h2>
+  <div class="grid grid--3">
+    <div class="card"><h3>60-min Advisory Call</h3><p>Focused review for investors &amp; operators—clarify options, risks, and next steps.</p></div>
+    <div class="card"><h3>Retainer Advisory</h3><p>Lightweight ongoing access, async reviews, and monthly working sessions.</p></div>
+    <div class="card"><h3>Project Sprint (2–4 weeks)</h3><p>Due diligence, partner motion, or marketplace packaging with clear deliverables.</p></div>
+  </div>
+</div></section>
+
+<section id="about" class="section"><div class="container grid grid--2">
+  <div><h2 class="section__title">About Thomas</h2><p>I help investors and product leaders cut through noise and make decisions that move revenue. My lens blends hands-on GTM with deep ecosystem fluency across AI/data infra and hyperscaler channels.</p>
+    <ul class="bullets"><li>Built &amp; scaled partnerships with AWS, GCP, Snowflake, Databricks</li><li>Fast-tracked AWS from listed to validated in one quarter; Rising Stars</li><li>Created motions that multiply pipeline via marketplace &amp; co-sell</li></ul>
+  </div>
+  <div class="card"><h3>Topics I’m most useful on</h3><ul class="bullets"><li>Hyperscaler incentives; ACE/Marketplace mechanics</li><li>Pragmatic AI adoption roadmaps tied to outcomes</li><li>Vector DB + orchestration landscape for product &amp; GTM</li></ul></div>
+</div></section>
+
+<section id="book" class="section section--soft"><div class="container">
+  <h2 class="section__title">Book a Call</h2>
+  <p class="section__sub">Choose the option that fits. Both calendars update in real-time.</p>
+  <div class="tabs"><button class="tab tab--active" data-target="#cal-intro">Intro — 30 min (Free)</button><button class="tab" data-target="#cal-paid">Advisory — 60 min (Paid)</button></div>
+  <div class="embed" id="cal-intro"><div class="calendly-inline-widget" data-url="INTRO_LINK" style="min-width:320px;height:850px;"></div></div>
+  <div class="embed hidden" id="cal-paid"><div class="calendly-inline-widget" data-url="PAID_LINK" style="min-width:320px;height:850px;"></div></div>
+</div></section>
+
+<section id="contact" class="section"><div class="container grid grid--2">
+  <div><h2 class="section__title">Get in Touch</h2><p>Prefer email? <a href="mailto:thomas@obsidianecho.com">thomas@obsidianecho.com</a></p></div>
+  <form name="contact" method="POST" data-netlify="true" class="card form">
+    <input type="hidden" name="form-name" value="contact">
+    <label>Name<input name="name" required></label>
+    <label>Email<input name="email" type="email" required></label>
+    <label>Message<textarea name="message" rows="5"></textarea></label>
+    <button class="btn btn--primary" type="submit">Send</button>
+  </form>
+</div></section>
+</main>
+
+<footer class="footer"><div class="container footer__inner"><span>© 2025 Obsidian Echo</span><span><a href="#">Privacy</a> · <a href="#">Terms</a></span></div></footer>
+
+<script src="script.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDP83YFBS"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config','G-4PDP83YFBS');</script>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</body></html>
