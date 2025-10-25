@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Expert Network Request — Obsidian Echo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>body{font-family:Inter,system-ui,ui-sans-serif}</style>
+</head>
+<body class="bg-white text-gray-800">
+  <nav class="w-full border-b">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html#top" class="font-extrabold tracking-tight">OBSIDIAN ECHO</a>
+      <div class="hidden md:flex gap-6">
+        <a href="index.html#services" class="text-gray-700 hover:text-gray-900">Services</a>
+        <a href="index.html#focus" class="text-gray-700 hover:text-gray-900">Focus</a>
+        <a href="index.html#about" class="text-gray-700 hover:text-gray-900">About</a>
+        <a href="index.html#book" class="text-gray-700 hover:text-gray-900">Book</a>
+        <a href="index.html#contact" class="text-gray-700 hover:text-gray-900">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="py-14 px-6">
+    <div class="max-w-3xl mx-auto">
+      <h1 class="text-3xl md:text-4xl font-bold mb-3">Expert Network Request</h1>
+      <p class="text-gray-600 mb-6">
+        This form is for <b>GLG, Guidepoint, AlphaSights, Third Bridge</b>, and similar expert networks.
+        Requests made here are handled <b>via your network platform</b> for compliance and billing.
+      </p>
+
+      <div class="rounded border p-5 bg-white shadow-sm">
+        <form name="expert-network-request" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="expert-network-request" />
+          <p class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></p>
+
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm mb-1">Your name</label>
+              <input name="requester_name" class="w-full border rounded px-3 py-3" required>
+            </div>
+            <div>
+              <label class="block text-sm mb-1">Your email</label>
+              <input name="requester_email" type="email" class="w-full border rounded px-3 py-3" required>
+            </div>
+            <div>
+              <label class="block text-sm mb-1">Network</label>
+              <select name="network" class="w-full border rounded px-3 py-3" required>
+                <option value="">Select…</option>
+                <option>GLG</option>
+                <option>Guidepoint</option>
+                <option>AlphaSights</option>
+                <option>Third Bridge</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm mb-1">Client/Fund (optional)</label>
+              <input name="client" class="w-full border rounded px-3 py-3">
+            </div>
+            <div>
+              <label class="block text-sm mb-1">Project title or ID (optional)</label>
+              <input name
