@@ -28,7 +28,7 @@
     <div class="max-w-3xl mx-auto">
       <h1 class="text-3xl md:text-4xl font-bold mb-3">Expert Network Request</h1>
       <p class="text-gray-600 mb-6">
-        This form is for <b>GLG, Guidepoint, AlphaSights, Third Bridge</b>, and similar expert networks.
+        Use this form if you are booking through <b>GLG, Guidepoint, AlphaSights, Third Bridge</b>, or a similar expert network.
         Requests made here are handled <b>via your network platform</b> for compliance and billing.
       </p>
 
@@ -63,4 +63,61 @@
             </div>
             <div>
               <label class="block text-sm mb-1">Project title or ID (optional)</label>
-              <input name
+              <input name="project_id" class="w-full border rounded px-3 py-3">
+            </div>
+            <div>
+              <label class="block text-sm mb-1">Urgency</label>
+              <select name="urgency" class="w-full border rounded px-3 py-3">
+                <option>Next 24 hours</option>
+                <option>Next 2–3 days</option>
+                <option>This week</option>
+                <option>Flexible</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <label class="block text-sm mb-1">Preferred time windows (include timezone)</label>
+            <textarea name="preferred_times" rows="3" class="w-full border rounded px-3 py-3" placeholder="e.g., Tue 1–3pm PT, Wed 9–11am PT"></textarea>
+          </div>
+
+          <div class="mt-4">
+            <label class="block text-sm mb-1">Context & objectives</label>
+            <textarea name="context" rows="5" class="w-full border rounded px-3 py-3" placeholder="Topics, key questions, and any materials you will share via the network"></textarea>
+          </div>
+
+          <div class="mt-5 space-y-3 text-sm">
+            <label class="flex items-start gap-2">
+              <input type="checkbox" name="attest_mnpi" required>
+              <span>I confirm this request will be handled through an approved expert network and will not involve confidential or material non-public information.</span>
+            </label>
+            <label class="flex items-start gap-2">
+              <input type="checkbox" name="attest_policy" required>
+              <span>I confirm the session will comply with my firm’s policies and the network’s Terms.</span>
+            </label>
+          </div>
+
+          <div class="mt-6 flex gap-3">
+            <button type="submit" class="px-6 py-3 bg-gray-900 text-white rounded font-semibold hover:opacity-90">Submit request</button>
+            <a href="index.html#book" class="px-6 py-3 border border-gray-300 rounded font-semibold hover:bg-gray-50">Back</a>
+          </div>
+
+          <p class="text-xs text-gray-500 mt-4">
+            You will receive an email confirmation when this request is submitted. For urgent cases, also email <a href="mailto:thomas@obsidianecho.com" class="underline">thomas@obsidianecho.com</a>.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-10 bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+      <div class="mb-4 md:mb-0">
+        <div class="text-2xl font-semibold">OBSIDIAN ECHO</div>
+        <p class="text-gray-400">Strategic Advisory for Technology Investors</p>
+      </div>
+      <p class="text-gray-400">© 2025 Obsidian Echo</p>
+    </div>
+  </footer>
+</body>
+</html>
