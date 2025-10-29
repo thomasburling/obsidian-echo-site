@@ -190,34 +190,57 @@
   </div>
 </section>
 
-<!-- BOOK (robust Calendly inline with fallback) -->
-<section id="book" class="py-16 px-6 bg-gray-50">
-  <div class="max-w-6xl mx-auto text-center mb-6">
-    <h2 class="text-3xl md:text-4xl font-bold mb-2">Book a Call</h2>
-    <p class="text-gray-600">Choose the option that fits. Calendly handles time zones, availability and payment.</p>
+<!-- BOOKING (Request → Confirmation Flow) -->
+<section id="book" class="py-20 bg-gray-50">
+  <div class="max-w-4xl mx-auto text-center px-6">
+    <h2 class="text-4xl font-extrabold text-gray-900 mb-6">
+      Request a Strategic Advisory Session
+    </h2>
+    <p class="text-gray-600 text-lg mb-10">
+      Select your preferred session type and submit a short request form.
+      You’ll receive a scheduling link once your session is confirmed.
+    </p>
+
+    <!-- Session Options -->
+    <div class="flex flex-wrap justify-center gap-4 mb-8">
+      <button data-session="quick" class="session-btn px-5 py-3 rounded border bg-white text-gray-800 font-semibold hover:bg-gray-100">Quick Consultation — 30 min</button>
+      <button data-session="advisory" class="session-btn px-5 py-3 rounded border bg-white text-gray-800 font-semibold hover:bg-gray-100">Advisory Session — 60 min</button>
+      <button data-session="expert" class="session-btn px-5 py-3 rounded border bg-white text-gray-800 font-semibold hover:bg-gray-100">Expert Network Request</button>
+    </div>
+
+    <!-- Simple Request Form -->
+    <form name="session-request" method="POST" data-netlify="true" class="max-w-2xl mx-auto bg-white rounded-xl border p-6 shadow">
+      <input type="hidden" name="session-type" id="session-type" />
+      <div class="mb-4">
+        <label class="block text-gray-700 font-medium mb-2">Name</label>
+        <input type="text" name="name" required class="w-full border rounded px-3 py-2">
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 font-medium mb-2">Email</label>
+        <input type="email" name="email" required class="w-full border rounded px-3 py-2">
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 font-medium mb-2">Company / Context</label>
+        <textarea name="context" rows="4" class="w-full border rounded px-3 py-2"></textarea>
+      </div>
+      <button type="submit" class="px-6 py-3 bg-gray-900 text-white font-semibold rounded hover:opacity-90">Submit Request</button>
+    </form>
+
+    <p class="text-sm text-gray-500 mt-6">
+      Once reviewed, you’ll receive a direct Calendly link to confirm your time and complete payment.
+    </p>
   </div>
+</section>
 
-  <div class="flex flex-wrap justify-center gap-3 mb-4">
-  <a href="https://calendly.com/thomas-obsidianecho/quick-consultation-400-30-min"
-   target="_blank" rel="noopener"
-   class="px-4 py-2 rounded border bg-white text-gray-800 font-semibold hover:bg-gray-100">
-   Intro — 30 min ($400)
-</a>
-
-<a href="https://calendly.com/thomas-obsidianecho/advisory-call-750-60-min"
-   target="_blank" rel="noopener"
-   class="px-4 py-2 rounded border bg-white text-gray-800 font-semibold hover:bg-gray-100">
-   Advisory — 60 min ($750)
-</a>
-
-<a href="expert-request.html"
-   class="px-4 py-2 rounded border bg-white text-gray-800 font-semibold hover:bg-gray-100">
-   Expert Network
-</a>
-
-  </div>
-
-  <div id="calWrap" class="bg-white border rounded-xl p-2 max-w-6xl mx-auto min-h-[820px]"></div>
+<script>
+  // Capture which session type was selected
+  document.querySelectorAll('.session-btn').forEach(btn => {
+    btn.addEventListener('click', e => {
+      document.getElementById('session-type').value = e.target.dataset.session;
+      window.scrollTo({ top: document.querySelector('form').offsetTop - 100, behavior: 'smooth' });
+    });
+  });
+</script>
 
   <!-- Fallback if embed is blocked -->
   <div id="calFallback" class="max-w-6xl mx-auto text-center hidden">
